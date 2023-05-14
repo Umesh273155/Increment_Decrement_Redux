@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+   
+    import './App.css';
+    import Count from './Components/Count';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+     import {useDispatch} from "react-redux";
+   
+    function App(){
+     const dispatch= useDispatch();
+    return (
+        <div className="App">
+            <h1>Hello</h1>
+            <button onClick={(e)=>dispatch({type:"DECREMENT" })}>DECREMENT</button>
+     <Count/>
+      
+        <button onClick={(e)=>dispatch({type:"INCREMENT"})}>INCREMENT</button>
+         
+         </div>
+
+    )
 }
 
 export default App;
